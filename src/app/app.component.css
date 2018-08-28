@@ -1,8 +1,10 @@
 .panel-heading {
   color: #b4d315;
   font-size: 50pt;
-  background: black;
   height: 200px;
+  background: url('/assets/waveform.jpeg');
+  background-position: center;
+  background-size: cover;
 }
 
 h1 {
