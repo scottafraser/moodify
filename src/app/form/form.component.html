@@ -6,6 +6,7 @@
         <option *ngFor="let genre of genres" value="{{genre}}">{{genre}}</option>
       </select>
     </div>
+
     <br>
     <!-- <button (click)="">Get Songs</button> -->
     <select class="form-control" id="genre-seeds">
@@ -138,3 +139,118 @@
     </select>
     <button type="submit" id="buttonStyle" name="button">Submit</button>
   </form>
+
+    <h2>Right now, how much do you agree with each of the following statements?</h2>
+
+    <div id="Q1" class="form-group" #q1>
+      <h3>I feel happy and optimistic.</h3>
+      <input type="radio" name="valence-inc" [value]="1" id="Q1_s-disagree" [(ngModel)]="q1.value">
+      <label for="Q1_s-disagree">Strongly Disagree</label>
+
+      <input type="radio" name="valence-inc" [value]="2" id="Q1_disagree" [(ngModel)]="q1.value">
+      <label for="Q1_disagree">Disagree</label>
+
+      <input type="radio" name="valence-inc" [value]="3" id="Q1_neutral" [(ngModel)]="q1.value">
+      <label for="Q1_neutral">Feel Neutral</label>
+
+      <input type="radio" name="valence-inc" [value]="4" id="Q1_agree" [(ngModel)]="q1.value">
+      <label for="Q1_agree">Agree</label>
+
+      <input type="radio" name="valence-inc" [value]="5" id="Q1_s-agree" [(ngModel)]="q1.value">
+      <label for="Q1_s-agree">Strongly Agree</label>
+    </div>
+
+    <div id="Q2" class="form-group" #q2>
+      <h3>I feel worried.</h3>
+      <input type="radio" name="tempo-decr" [value]="5" id="Q2_s-disagree" [(ngModel)]="q2.value">
+      <label for="Q2_s-disagree">Strongly Disagree</label>
+
+      <input type="radio" name="tempo-decr" [value]="4" id="Q2_disagree" [(ngModel)]="q2.value">
+      <label for="Q2_disagree">Disagree</label>
+
+      <input type="radio" name="tempo-decr" [value]="3" id="Q2_neutral" [(ngModel)]="q2.value">
+      <label for="Q2_neutral">Feel Neutral</label>
+
+      <input type="radio" name="tempo-decr" [value]="2" id="Q2_agree" [(ngModel)]="q2.value">
+      <label for="Q2_agree">Agree</label>
+
+      <input type="radio" name="tempo-decr" [value]="1" id="Q2_s-agree" [(ngModel)]="q2.value">
+      <label for="Q2_s-agree">Strongly Agree</label>
+    </div>
+
+    <div id="Q3" class="form-group" #q3>
+      <h3>I feel hopeless or discouraged.</h3>
+      <input type="radio" name="valence-decr" [value]="5" id="Q3_s-disagree" [(ngModel)]="q3.value">
+      <label for="Q3_s-disagree">Strongly Disagree</label>
+
+      <input type="radio" name="valence-decr" [value]="4" id="Q3_disagree" [(ngModel)]="q3.value">
+      <label for="Q3_disagree">Disagree</label>
+
+      <input type="radio" name="valence-decr" [value]="3" id="Q3_neutral" [(ngModel)]="q3.value">
+      <label for="Q3_neutral">Feel Neutral</label>
+
+      <input type="radio" name="valence-decr" [value]="2" id="Q3_agree" [(ngModel)]="q3.value">
+      <label for="Q3_agree">Agree</label>
+
+      <input type="radio" name="valence-decr" [value]="1" id="Q3_s-agree" [(ngModel)]="q3.value">
+      <label for="Q3_s-agree">Strongly Agree</label>
+    </div>
+
+    <div id="Q4" class="form-group" #q4>
+      <h3>I feel calm.</h3>
+      <input type="radio" name="danceability-decr" [value]="5" id="Q4_s-disagree" [(ngModel)]="q4.value">
+      <label for="Q4_s-disagree">Strongly Disagree</label>
+
+      <input type="radio" name="danceability-decr" [value]="4" id="Q4_disagree" [(ngModel)]="q4.value">
+      <label for="Q4_disagree">Disagree</label>
+
+      <input type="radio" name="danceability-decr" [value]="3" id="Q4_neutral" [(ngModel)]="q4.value">
+      <label for="Q4_neutral">Feel Neutral</label>
+
+      <input type="radio" name="danceability-decr" [value]="2" id="Q4_agree" [(ngModel)]="q4.value">
+      <label for="Q4_agree">Agree</label>
+
+      <input type="radio" name="danceability-decr" [value]="1" id="Q4_s-agree" [(ngModel)]="q4.value">
+      <label for="Q4_s-agree">Strongly Agree</label>
+    </div>
+
+    <div id="Q5" class="form-group" #q5>
+      <h3>I feel as if my level of concentration is excellent.</h3>
+      <input type="radio" name="tempo-inc" [value]="1" id="Q5_s-disagree" [(ngModel)]="q5.value">
+      <label for="Q5_s-disagree">Strongly Disagree</label>
+
+      <input type="radio" name="tempo-inc" [value]="2" id="Q5_disagree" [(ngModel)]="q5.value">
+      <label for="Q5_disagree">Disagree</label>
+
+      <input type="radio" name="tempo-inc" [value]="3" id="Q5_neutral" [(ngModel)]="q5.value">
+      <label for="Q5_neutral">Feel Neutral</label>
+
+      <input type="radio" name="tempo-inc" [value]="4" id="Q5_agree" [(ngModel)]="q5.value">
+      <label for="Q5_agree">Agree</label>
+
+      <input type="radio" name="tempo-inc" [value]="5" id="Q5_s-agree" [(ngModel)]="q5.value">
+      <label for="Q5_s-agree">Strongly Agree</label>
+    </div>
+
+    <div id="Q6" class="form-group" #q6>
+      <h3>I have a lot of energy.</h3>
+      <input type="radio" name="danceability-inc" [value]="1" id="Q6_s-disagree" [(ngModel)]="q6.value">
+      <label for="Q6_s-disagree">Strongly Disagree</label>
+
+      <input type="radio" name="danceability-inc" [value]="2" id="Q6_disagree" [(ngModel)]="q6.value">
+      <label for="Q6_disagree">Disagree</label>
+
+      <input type="radio" name="danceability-inc" [value]="3" id="Q6_neutral" [(ngModel)]="q6.value">
+      <label for="Q6_neutral">Feel Neutral</label>
+
+      <input type="radio" name="danceability-inc" [value]="4" id="Q6_agree" [(ngModel)]="q6.value">
+      <label for="Q6_agree">Agree</label>
+
+      <input type="radio" name="danceability-inc" [value]="5" id="Q6_s-agree" [(ngModel)]="q6.value">
+      <label for="Q6_s-agree">Strongly Agree</label>
+    </div>
+
+    <button (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)">Get Songs</button>
+  </form>
+  </div>
+
