@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// tslint:disable-next-line:import-blacklist
 import 'rxjs/Rx';
 import { SpotifyAPIService } from './spotify-api.service';
 

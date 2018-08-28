@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Http, RequestOptions, Headers } from '@angular/http';
+import { Http, Response, RequestOptions, Headers} from '@angular/http';
 
 @Injectable()
 export class SpotifyAPIService {
+ 
   client_id = "516dfc93cfe24870935c9d7112175615";
   client_secret = "a7878c184adf45e181275d3d0052da69";
 
-  private accessToken: any;
+  private accessToken: 'BQB0RwinwcDI7Nv7o5iORWUMcTHsDYXuxCsk5L_XSKyjmeKubObr28uePi9mnftTIEG8yvv-bJfrMZhujrkJEYOoaUKfLE53Ti3_82r-9kylsi4hy_C4afLgPm94j6sapPUCI-PUKKgFSUjfv5QAk-Y'
   private tokenType: string;
 
   constructor(private http: Http) { }
@@ -29,8 +30,6 @@ export class SpotifyAPIService {
         this.accessToken = token.access_token;
         this.tokenType = token.token_type;
       }, error => console.log(error));
-      console.log('here');
-      
   }
 
   searchAlbums(title: string) {
