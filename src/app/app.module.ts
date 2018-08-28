@@ -5,14 +5,15 @@ import { FormsModule }   from '@angular/forms';
 import { SpotifyAPIService } from './spotify-api.service'
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
+import { UserformComponent } from './userform/userform.component';
 import { FormComponent } from './form/form.component';
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
+    UserformComponent
     FormComponent
   ],
   imports: [
