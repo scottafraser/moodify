@@ -12,6 +12,7 @@ export class SpotifyAPIService {
   private access_token: string;
   private ArtistUrl: string;
   private AlbumsUrl: string;
+  private GenreUrl: string;
   private AlbumUrl: string;
   private encoded = btoa(this.client_id + ':' + this.client_secret);
   private base64 = 'OTk2MDgwOTM3ZWJiNDU5NGEwOTc5MTQ2YzljMGMxMjE6MGJkYTNjZmQyMTNjNDYyMmJjNmM1NjI1ODY1NjhlYzg=';
@@ -41,6 +42,15 @@ export class SpotifyAPIService {
       .map((res: Response) => res.json())
   }
 
+  loadGenres(token: string) {
+    this.GenreUrl = `https://api.spotify.com/v1/recommendations/available-genre-seeds`;
+    let headers = new Headers();
+    headers.append('Authorization', 'Bearer ' + token);
+
+    return this._http.get(this.GenreUrl, { headers: headers })
+      .map((res: Response) => res.json())
+  }
+
   getArtist(id: string, token: string) {
     this.ArtistUrl = 'https://api.spotify.com/v1/artists/' + id;
     let headers = new Headers();
@@ -52,7 +62,6 @@ export class SpotifyAPIService {
   }
 
 
-
   getAlbums(artistId: string, token: string) {
 
     this.AlbumsUrl = 'https://api.spotify.com/v1/artists/' + artistId + '/albums/?query=&limit=50';
@@ -61,7 +70,6 @@ export class SpotifyAPIService {
 
     return this._http.get(this.AlbumsUrl, { headers: headers })
       .map((res: Response) => res.json())
-
 
   }
 
