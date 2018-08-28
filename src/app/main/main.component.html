@@ -10,6 +10,7 @@
 <div id="albums" *ngFor="let album of albums">
   
   <h1>{{album.name}}</h1>
+  <a href="/details + {{album.id}}">link</a>
   <img src="{{album.images[0].url}}" alt="">
 
 </div>

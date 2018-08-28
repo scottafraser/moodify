@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SpotifyAPIService } from '../spotify-api.service'
+import { SpotifyAPIService } from '../spotify-api.service';
 
 @Component({
   selector: 'app-form',
@@ -9,22 +9,14 @@ import { SpotifyAPIService } from '../spotify-api.service'
 })
 export class FormComponent implements OnInit {
 
-  constructor(private spotifyAPI: SpotifyAPIService) { 
-    
+  constructor(private spotifyAPI: SpotifyAPIService) {
+
   }
   genres: any[];
 
   ngOnInit() {
-    this.genres= [];
-    this.spotifyAPI.loadGenres().subscribe(response => {
-      console.log(response);
-      
-      if(response.albums.items.length > 0) {
-        this.genres = response.genres;
-         
-      }
-    });
+
   }
-  
+
 
 }
