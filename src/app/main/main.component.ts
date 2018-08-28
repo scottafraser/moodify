@@ -11,21 +11,27 @@ import { Http, Response } from '@angular/http';
   styleUrls: ['./main.component.css'],
   providers: [SpotifyAPIService]
 })
-export class MainComponent implements OnInit {
-  artist = 'bob dylan';
+export class MainComponent {
+  artist: any[];
   albums: any[];
+  token: any[];
 
   constructor(
     public spotifyAPI: SpotifyAPIService
   ) {}
 
-  ngOnInit() {
-      this.spotifyAPI.searchAlbums(this.artist)
-        .subscribe(res => this.albums = res.albums.items);
-
+  searchAlbums(artist: string) {
+    this.spotifyAPI.getToken()
+      .subscribe(res => {
+        this.spotifyAPI.searchAlbums(artist, res.access_token)
+          // tslint:disable-next-line:no-shadowed-variable
+          .subscribe(res => {
+            this.albums = res.albums.items;
+            console.log(this.albums);
+          });
+      });
     }
 
 
+
 }
-
-

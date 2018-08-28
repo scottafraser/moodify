@@ -4,7 +4,7 @@
     <div class="form-group">
       <label for="artist">Artist</label>
       <input type=text #artistName>
-      <!-- <button (click)="searchAlbums(artistName.value)">Get Songs</button> -->
+      <button (click)="searchAlbums(artistName.value)">Get Songs</button>
     </div>
 </form>
 <div id="albums" *ngFor="let album of albums">
