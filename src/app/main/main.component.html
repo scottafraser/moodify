@@ -7,10 +7,12 @@
       <button (click)="searchAlbums(artistName.value)">Get Songs</button>
     </div>
 </form>
-<div id="albums" *ngFor="let album of albums">
-  
-  <h1>{{album.name}}</h1>
-  <a href="/details + {{album.id}}">link</a>
-  <img src="{{album.images[0].url}}" alt="">
+<button type="button" class="btn btn-info" name="button">bootstrap</button>
+<div class="row">
+  <div class="col-sm-3" id="albums" *ngFor="let album of albums">
+    <img class="img-fluid" src="{{album.images[0].url}}" alt="">
+    <a href="/details + {{album.id}}">{{album.artists[0].name}}</a>
+    <h3>{{album.name}}</h3>
 
+  </div>
 </div>
