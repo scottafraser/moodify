@@ -1,0 +1,9 @@
+<form>
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <select #selectGenre>
+        <option *ngFor="let genre of genres" value="{{genre}}">{{genre}}</option>
+      </select>
+    </div>
+    <!-- <button (click)="">Get Songs</button> -->
+  </form>
