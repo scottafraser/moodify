@@ -9,5 +9,5 @@ import { SpotifyAPIService } from './spotify-api.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'moodify';
 }
