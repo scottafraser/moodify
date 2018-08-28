@@ -1,3 +1,13 @@
+
+.albumBody {
+  color: white;
+}
+
+#btnStyle {
+  border-radius: 12px;
+  background-color: #d2d74c;
+  color: black;
+
 .col-md-3 {
   padding: 40px;
   margin: 60px;
@@ -12,4 +22,5 @@ a {
 
 h3 {
   font-size: 23px;
+
 }

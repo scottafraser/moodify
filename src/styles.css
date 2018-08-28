@@ -1,4 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 body {
-  background-color: #354c70;
+  background-color: black;
+  height: 100%;
+  color: white;
+}
+
+
+h1 {
+  font-family: 'Satisfy', cursive;
+}
+
+#grad1 {
+    background-color: black; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, black, #9470d1);
+    height: 600px;
+}
+
+.panel-heading {
+  text-align: center;
+  color: #b4d315;
+  font-size: 40pt;
+  height: 180px;
+  width: 100%;
+  background: url('/assets/waveform.jpeg');
+  background opacity: 0.1;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.panel-footer{
+  font-family: 'Cinzel';
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  position: 0;
+
 }

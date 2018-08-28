@@ -1,3 +1,14 @@
+<div class="albumBody">
+  <h1>Albums:</h1>
+  <form>
+      <div class="form-group">
+        <label for="artist">Artist</label>
+        <input type=text #artistName>
+        <button id="btnStyle" (click)="searchAlbums(artistName.value)">Get Songs</button>
+      </div>
+  </form>
+  <div id="albums" *ngFor="let album of albums">
+
 
 <h1>Albums;</h1>
 <form>
@@ -13,6 +24,7 @@
     <img class="img-fluid" src="{{album.images[0].url}}" alt="">
     <a href="/details + {{album.id}}">{{album.artists[0].name}}</a>
     <h3>{{album.name}}</h3>
+
 
   </div>
 </div>
