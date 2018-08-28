@@ -1,6 +1,10 @@
 .panel-heading {
   color: #b4d315;
   font-size: 50pt;
-  background: white;
-  font-family: sans-serif;
+  background: black;
+  height: 200px;
+}
+
+h1 {
+  font-family: 'Satisfy', cursive;
 }

@@ -1,5 +1,5 @@
 #grad1 {
     height: 600px;
     background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom right, #50f471, #042101);
+    background-image: linear-gradient(to bottom right, #8537ce, #440436);
 }
