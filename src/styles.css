@@ -13,7 +13,7 @@ h1 {
 
 #grad1 {
     background-color: black; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right, black, #440436);
+    background-image: linear-gradient(to right, black, #9470d1);
     height: 600px;
 }
 
