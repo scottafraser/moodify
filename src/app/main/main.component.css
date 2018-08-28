@@ -1,0 +1,15 @@
+.col-md-3 {
+  padding: 40px;
+  margin: 60px;
+}
+
+a {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  color: black;
+  font-size: 29px;
+}
+
+h3 {
+  font-size: 23px;
+}
