@@ -37,5 +37,7 @@ export class FormComponent implements OnInit {
     let tempoScore = q2Answer + q5Answer
 
   }
+  }
+
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SpotifyAPIService } from '../spotify-api.service'
+import { SpotifyAPIService } from '../spotify-api.service';
 import { Observable } from 'rxjs/Observable';
+import { Subscription } from 'rxjs/Subscription';
 import { Http, Response } from '@angular/http';
 
 
@@ -11,30 +12,39 @@ import { Http, Response } from '@angular/http';
   providers: [SpotifyAPIService]
 })
 export class MainComponent implements OnInit {
-  artist;
+  artist: any[];
+  genres: any[];
   albums: any[];
+  token: any[];
 
-  constructor(private spotifyAPI: SpotifyAPIService) {
-    this.spotifyAPI.login()
-    .subscribe(() => {
-      this.searchAlbums(this.artist);
-    });
-  }
+  constructor(
+    public spotifyAPI: SpotifyAPIService
+  ) {}
 
   ngOnInit() {
-    this.spotifyAPI.login()
-    console.log('hey');
-    
-  };
+    this.spotifyAPI.getToken()
+      .subscribe(res => {
+        this.spotifyAPI.loadGenres(res.access_token)
+          // tslint:disable-next-line:no-shadowed-variable
+          .subscribe(res => {
+            console.log(res);
+            this.genres = res;
+    });
+  });
+  }
 
-    searchAlbums(author: string) {
-      this.spotifyAPI.searchAlbums(author)
-        .subscribe(res => this.albums = res.albums.items)
-        console.log('hey', this.albums);
-        
+  searchAlbums(artist: string) {
+    this.spotifyAPI.getToken()
+      .subscribe(res => {
+        this.spotifyAPI.searchAlbums(artist, res.access_token)
+          // tslint:disable-next-line:no-shadowed-variable
+          .subscribe(res => {
+            this.albums = res.albums.items;
+            console.log(this.albums);
+          });
+      });
     }
 
 
+
 }
-
-

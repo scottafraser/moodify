@@ -1,8 +1,142 @@
-<form>
-    <div class="form-group">
-      <label for="genre">Genre</label>
-      <select #selectGenre>
-        <option *ngFor="let genre of genres" value="{{genre}}">{{genre}}</option>
+<div id="grad1">
+  <br>
+  <form>
+      <br>
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <select #selectGenre>
+          <option *ngFor="let genre of genres" value="{{genre}}">{{genre}}</option>
+        </select>
+      </div>
+      <br>
+      <!-- <button (click)="">Get Songs</button> -->
+      <select class="form-control" id="genre-seeds">
+        <option>Acoustic</option>
+        <option>Afrobeat</option>
+        <option>Alt-rock</option>
+        <option>Alternative</option>
+        <option>Ambient</option>
+        <option>Anime</option>
+        <option>Black-metal</option>
+        <option>Bluegrass</option>
+        <option>Blues</option>
+        <option>Bossanova</option>
+        <option>Brazil</option>
+        <option>Breakbeat</option>
+        <option>British</option>
+        <option>Cantopop</option>
+        <option>Chicago-house</option>
+        <option>Children</option>
+        <option>Chill</option>
+        <option>Classical</option>
+        <option>Club</option>
+        <option>Comedy</option>
+        <option>Country</option>
+        <option>Dance</option>
+        <option>Dancehall</option>
+        <option>Death-metal</option>
+        <option>Deep-house</option>
+        <option>Detroit-techno</option>
+        <option>Disco</option>
+        <option>Disney</option>
+        <option>Drum-and-bass</option>
+        <option>Dub</option>
+        <option>Dubstep</option>
+        <option>EDM</option>
+        <option>Electro</option>
+        <option>Electronic</option>
+        <option>Emo</option>
+        <option>Folk</option>
+        <option>Forro</option>
+        <option>French</option>
+        <option>Funk</option>
+        <option>Garage</option>
+        <option>German</option>
+        <option>Gospel</option>
+        <option>Goth</option>
+        <option>Grindcore</option>
+        <option>Groove</option>
+        <option>Grunge</option>
+        <option>Guitar</option>
+        <option>Happy</option>
+        <option>Hard-rock</option>
+        <option>Hardcore</option>
+        <option>Hardstyle</option>
+        <option>Heavy-metal</option>
+        <option>Hip-hop</option>
+        <option>Holidays</option>
+        <option>Honky-tonk</option>
+        <option>House</option>
+        <option>IDM</option>
+        <option>Indian</option>
+        <option>Indie</option>
+        <option>Indie-pop</option>
+        <option>Industrial</option>
+        <option>Iranian</option>
+        <option>J-dance</option>
+        <option>J-idol</option>
+        <option>J-pop</option>
+        <option>J-rock</option>
+        <option>Jazz</option>
+        <option>K-pop</option>
+        <option>Kids</option>
+        <option>Latin</option>
+        <option>Latino</option>
+        <option>Malay</option>
+        <option>Mandopop</option>
+        <option>Metal</option>
+        <option>Metal-misc</option>
+        <option>Metalcore</option>
+        <option>Minimal-techno</option>
+        <option>Movies</option>
+        <option>MPB</option>
+        <option>New-age</option>
+        <option>New-release</option>
+        <option>Opera</option>
+        <option>Pagode</option>
+        <option>Party</option>
+        <option>Philippines-opm</option>
+        <option>Piano</option>
+        <option>Pop</option>
+        <option>Pop-film</option>
+        <option>Post-dubstep</option>
+        <option>Power-pop</option>
+        <option>Progressive-house</option>
+        <option>Psych-rock</option>
+        <option>Punk</option>
+        <option>Punk-rock</option>
+        <option>R-N-B</option>
+        <option>Rainy-day</option>
+        <option>Reggae</option>
+        <option>Reggaeton</option>
+        <option>Road-trip</option>
+        <option>Rock</option>
+        <option>Rock-n-roll</option>
+        <option>Rockabilly</option>
+        <option>Romance</option>
+        <option>Sad</option>
+        <option>Salsa</option>
+        <option>Samba</option>
+        <option>Sertanejo</option>
+        <option>Show-tunes</option>
+        <option>Singer-songwriter</option>
+        <option>Ska</option>
+        <option>Sleep</option>
+        <option>Songwriter</option>
+        <option>Soul</option>
+        <option>Soundtracks</option>
+        <option>Spanish</option>
+        <option>Study</option>
+        <option>Summer</option>
+        <option>Swedish</option>
+        <option>Synth-pop</option>
+        <option>Tango</option>
+        <option>Techno</option>
+        <option>Trance</option>
+        <option>Trip-hop</option>
+        <option>Turkish</option>
+        <option>Work-out</option>
+        <option>World-music<option>
       </select>
     </div>
 
@@ -118,3 +252,4 @@
 
     <button (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)">Get Songs</button>
   </form>
+  </div>
