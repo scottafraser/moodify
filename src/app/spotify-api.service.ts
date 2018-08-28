@@ -29,6 +29,8 @@ export class SpotifyAPIService {
         this.accessToken = token.access_token;
         this.tokenType = token.token_type;
       }, error => console.log(error));
+      console.log('here');
+      
   }
 
   searchAlbums(title: string) {
@@ -42,6 +44,14 @@ export class SpotifyAPIService {
   loadAlbum(id) {
     const options = this.getOptions();
     return this.http.get(`https://api.spotify.com/v1/albums/${id}`, options)
+      .map(res => res.json())
+      .publishLast()
+      .refCount()
+  }
+
+  loadGenres() {
+    const options = this.getOptions();
+    return this.http.get(`https://api.spotify.com/v1/recommendations/available-genre-seeds`, options)
       .map(res => res.json())
       .publishLast()
       .refCount()
