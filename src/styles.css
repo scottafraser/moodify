@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: black;
+  height: 100%;
+  color: white;
+}
+
+
+h1 {
+  font-family: 'Satisfy', cursive;
+}
+
+#grad1 {
+    background-color: black; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, black, #440436);
+    height: 600px;
+}
+
+.panel-heading {
+  text-align: center;
+  color: #b4d315;
+  font-size: 40pt;
+  height: 200px;
+  width: 100%;
+  background: url('/assets/waveform.jpeg');
+  background-position: center;
+  background-size: cover;
+}
