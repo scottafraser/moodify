@@ -21,9 +21,10 @@ h1 {
   text-align: center;
   color: #b4d315;
   font-size: 40pt;
-  height: 200px;
+  height: 180px;
   width: 100%;
   background: url('/assets/waveform.jpeg');
+  background opacity: 0.1;
   background-position: center;
   background-size: cover;
 }
@@ -31,4 +32,8 @@ h1 {
 
 .panel-footer{
   font-family: 'Cinzel';
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  position: 0;
 }
