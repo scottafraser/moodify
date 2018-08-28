@@ -13,7 +13,7 @@ import { FormComponent } from './form/form.component';
   declarations: [
     AppComponent,
     MainComponent,
-    UserformComponent
+    UserformComponent,
     FormComponent
   ],
   imports: [
