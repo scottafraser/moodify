@@ -20,7 +20,7 @@ h1 {
  }
 
   .panel-heading {
- text-align: center;
+
  /* color: #b4d315; */
  color: white;
  font-size: 40pt;
@@ -30,6 +30,7 @@ h1 {
  background opacity: 0.1;
  background-position: center;
  background-size: cover;
+ overflow: hidden;
 }
 
  .panel-footer {
@@ -38,4 +39,8 @@ h1 {
  padding: 10px;
  margin: 0;
  position: 0;
+}
+
+.row {
+  text-align: left;
 }

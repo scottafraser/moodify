@@ -12,6 +12,13 @@
   color: white;
 }
 
+h2 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  font-size: 27px;
+}
+
 h4 {
   color: black;
   font-family: Cinzel;
@@ -20,8 +27,12 @@ h4 {
 }
 
 h3 {
-  color: pink;
-  font-family: 'Sawarabi Mincho', sans-serif;
+  color: white;
+  /* font-family: 'Sawarabi Mincho', sans-serif; */
+  font-family: 'Noto', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 hr {
@@ -33,4 +44,38 @@ hr {
   width: 20%;
   justify-content: center;
   align-content: center;
+}
+
+.form-control {
+  display: inline-flex;
+  margin-bottom: 110px;
+}
+
+input {
+  margin-left: 50px;
+
+}
+
+label {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.radio {
+  width: 25px;
+  height: 25px;
+  margin-right: 7px;
+}
+
+.form-group {
+  padding: 40px;
+}
+
+.form-group h3 {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.genre {
+  padding-top: 110px;
 }
