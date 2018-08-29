@@ -6,15 +6,13 @@ import { SpotifyAPIService } from './spotify-api.service'
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { FormComponent } from './form/form.component';
-import { ResultsComponent } from './results/results.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
-    FormComponent,
-    ResultsComponent
+    FormComponent
   ],
   imports: [
     BrowserModule,
