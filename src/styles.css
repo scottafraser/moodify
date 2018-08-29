@@ -16,7 +16,7 @@ h1 {
  #grad1 {
    background-color: black; /* For browsers that do not support gradients */
    background-image: linear-gradient(to bottom right, black, #702270);
-   height: 1100px;
+   height: 1375px;
  }
 
   .panel-heading {

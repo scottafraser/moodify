@@ -135,7 +135,7 @@
     <h3>Right now, how much do you agree with each of the following statements?</h3>
     <div class="row">
       <div id="Q1" class="form-group col-md-4" #q1>
-        <h3>I feel happy and optimistic.</h3>
+        <h3>I feel optimistic.</h3>
         <input class="radio" type="radio" name="valence-inc" [value]="0" id="Q1_s-disagree" [(ngModel)]="q1.value">
         <label for="Q1_s-disagree">Strongly Disagree</label><br>
 
@@ -171,7 +171,7 @@
       </div>
 
       <div id="Q3" class="form-group col-md-4" #q3>
-        <h3>I feel hopeless or discouraged.</h3>
+        <h3>I feel discouraged.</h3>
         <input class="radio" type="radio" name="valence-decr" [value]="4" id="Q3_s-disagree" [(ngModel)]="q3.value">
         <label for="Q3_s-disagree">Strongly Disagree</label><br>
 
@@ -225,7 +225,7 @@
       </div>
 
       <div id="Q6" class="form-group col-md-4" #q6>
-        <h3>I have a lot of energy.</h3>
+        <h3>I feel energetic.</h3>
         <input class="radio" type="radio" name="danceability-inc" [value]="0" id="Q6_s-disagree" [(ngModel)]="q6.value">
         <label for="Q6_s-disagree">Strongly Disagree</label><br>
 
@@ -245,7 +245,7 @@
     </div>
 
     <br>
-    <button (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)">Get Mood</button>
+    <button (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)"><h5>Get Mood Playlist</h5></button>
   </form>
 
   <div *ngFor="let song of playlist">
