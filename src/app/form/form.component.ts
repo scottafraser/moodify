@@ -20,24 +20,17 @@ export class FormComponent implements OnInit {
 
     this.genres= [];
     this.spotifyAPI.loadGenres().subscribe(response => {
-      console.log(response);
-
-      if(response.albums.items.length > 0) {
+      if (response.albums.items.length > 0) {
         this.genres = response.genres;
-
       }
     });
   }
 
   tallyMoodAndSaveGenre(genre: string, q1Answer: string, q2Answer: string, q3Answer: string, q4Answer: string, q5Answer: string, q6Answer: string) {
     this.genre = genre;
-    console.log(this.genre);
     let valenceScore = q1Answer + q3Answer;
-    let danceabilityScore = q4Answer + q6Answer
-    let tempoScore = q2Answer + q5Answer
+    let danceabilityScore = q4Answer + q6Answer;
+    let tempoScore = q2Answer + q5Answer;
 
   }
-  }
-
-
 }

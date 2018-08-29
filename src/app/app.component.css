@@ -1,6 +1,5 @@
 .panel-heading {
   color: #b4d315;
-  font-size: 50pt;
   height: 200px;
   background: url('/assets/waveform.jpeg');
   background-position: center;
@@ -9,4 +8,9 @@
 
 h1 {
   font-family: 'Satisfy', cursive;
+  font-size: 72pt;
+  text-align: center;
+  padding-top: 40px;
+  opacity: 1.0;
+  font-size-adjust: auto;
 }

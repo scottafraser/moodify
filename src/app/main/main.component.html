@@ -1,18 +1,22 @@
+<div class="container">
+  <br>
+  <br>
+  <h1>Albums:</h1>
+  <form>
+      <div class="form-group">
+        <label for="artist">Find albums by Artist</label>
+        <br>
+        <input type=text #artistName placeholder="Artist Name here..">
+        <button id="albumBtn" (click)="searchAlbums(artistName.value)">Get Songs</button>
+      </div>
+  </form>
 
-<h1>Albums;</h1>
-<form>
-    <div class="form-group">
-      <label for="artist">Artist</label>
-      <input type=text #artistName>
-      <button (click)="searchAlbums(artistName.value)">Get Songs</button>
+  <div class="row">
+    <div class="col-sm-3" id="albums" *ngFor="let album of albums">
+      <img class="img-fluid" src="{{album.images[0].url}}" alt="">
+      <a href="/details + {{album.id}}">{{album.artists[0].name}}</a>
+      <h3>{{album.name}}</h3>
+
     </div>
-</form>
-<button type="button" class="btn btn-info" name="button">bootstrap</button>
-<div class="row">
-  <div class="col-sm-3" id="albums" *ngFor="let album of albums">
-    <img class="img-fluid" src="{{album.images[0].url}}" alt="">
-    <a href="/details + {{album.id}}">{{album.artists[0].name}}</a>
-    <h3>{{album.name}}</h3>
-
   </div>
 </div>
