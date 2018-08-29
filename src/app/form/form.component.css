@@ -1,9 +1,4 @@
-#grad1 {
-    background-color: red; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom right, purple, #440436);
-    height: 110%;
 
-}
 
 #moodBtn {
   background-color: chartreuse;
