@@ -11,7 +11,7 @@ import { Http, Response } from '@angular/http';
   styleUrls: ['./main.component.css'],
   providers: [SpotifyAPIService]
 })
-export class MainComponent implements OnInit {
+export class MainComponent {
   artist: any[];
   genres: any[];
   albums: any[];
@@ -20,18 +20,6 @@ export class MainComponent implements OnInit {
   constructor(
     public spotifyAPI: SpotifyAPIService
   ) {}
-
-  ngOnInit() {
-  //   this.spotifyAPI.getToken()
-  //     .subscribe(res => {
-  //       this.spotifyAPI.loadGenres(res.access_token)
-  //         // tslint:disable-next-line:no-shadowed-variable
-  //         .subscribe(res => {
-  //           console.log(res);
-  //           this.genres = res;
-  //   });
-  // });
-  }
 
   searchAlbums(artist: string) {
     this.spotifyAPI.getToken()

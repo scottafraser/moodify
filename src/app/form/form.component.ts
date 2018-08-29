@@ -8,9 +8,11 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./form.component.css'],
   providers: [SpotifyAPIService]
 })
-export class FormComponent implements OnInit {
+export class FormComponent{
+  playlist: any[];
 
   constructor(private spotifyAPI: SpotifyAPIService) {
+   
 
   }
   genre: string
@@ -19,31 +21,6 @@ export class FormComponent implements OnInit {
   danceabilitySpotifyTarget: number;
   tempoSpotifyMin: number;
   tempoSpotifyMax: number;
-
-  ngOnInit() {
-    // this.genres= [];
-    // this.spotifyAPI.getToken()
-    //   .subscribe(res => {
-    //     this.spotifyAPI.loadGenres(res.access_token)
-    //     .subscribe(res => {
-    //       if (res.albums.items.length > 0) {
-    //     this.genres = res.genres;
-    //   }
-    //   });
-    // });
-  }
-
-  // getTracksByMood(genre: string, valenceTarget: number, danceabilityTarget: number, tempoMin: number, tempoMax: number) {
-  //   this.spotifyAPI.getToken()
-  //     .subscribe(res => {
-  //       this.spotifyAPI.moodTracks(genre, valenceTarget, danceabilityTarget, tempoMin, tempoMax,  res.access_token)
-  //         // tslint:disable-next-line:no-shadowed-variable
-  //         .subscribe(res => {
-  //           // this.albums = res.albums.items;
-  //           console.log(res);
-  //         });
-  //     });
-  //   }
 
   tallyMoodAndSaveGenre(genre: string, q1Answer: string, q2Answer: string, q3Answer: string, q4Answer: string, q5Answer: string, q6Answer: string) {
     this.genre = genre;
@@ -61,8 +38,8 @@ export class FormComponent implements OnInit {
       this.spotifyAPI.moodTracks(this.genre, this.vanlenceSpotifyTarget, this.danceabilitySpotifyTarget,  this.tempoSpotifyMin , this.tempoSpotifyMax,  res.access_token)
         // tslint:disable-next-line:no-shadowed-variable
         .subscribe(res => {
-          // this.albums = res.albums.items;
-          console.log(res);
+          this.playlist = res.tracks;
+          console.log(this.playlist);
         });
     });
     console.log(this.vanlenceSpotifyTarget, this.danceabilitySpotifyTarget, this.tempoSpotifyMin, this.tempoSpotifyMax)
