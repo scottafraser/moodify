@@ -1,4 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
-body {
-  background-color: black;
+body{
+ background-color: black;
+ height: 100%;
+ color: white;
+}
+
+h1 {
+  font-family: 'Satisfy', cursive;
+  font-size: 152pt;
+  opacity: .9;
+  text-align: center;
+  padding-top: 230px;
+  font-size-adjust: auto;
+}
+
+ #grad1 {
+   background-color: black; /* For browsers that do not support gradients */
+   background-image: linear-gradient(to bottom right, black, #702270);
+   height: 1100px;
+ }
+
+  .panel-heading {
+ text-align: center;
+ /* color: #b4d315; */
+ color: white;
+ font-size: 40pt;
+ height: 700px;
+ width: 100%;
+ background: url('/assets/radiowave2.jpg');
+ background opacity: 0.1;
+ background-position: center;
+ background-size: cover;
+}
+
+ .panel-footer {
+ font-family: 'Cinzel';
+ text-align: center;
+ padding: 10px;
+ margin: 0;
+ position: 0;
 }
