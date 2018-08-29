@@ -247,7 +247,10 @@
     <br>
     <button class="hoverBtn" (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)"><h5>Get Mood Playlist</h5></button>
   </form>
-  <h1>Mood Playlist</h1>
+  <div *ngIf="playlist.length > 0" class="">
+    <h1>Mood Playlist</h1>
+  </div>
+
   <div class="row">
     <div class="moodPlaylist col-lg-4" *ngFor="let song of playlist">
       <div class="">
