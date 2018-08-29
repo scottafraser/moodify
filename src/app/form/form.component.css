@@ -2,6 +2,7 @@
     background-color: red; /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right, purple, #440436);
     height: 110%;
+    display: flex;
 
 }
 
@@ -31,5 +32,13 @@ h3 {
   font-family: 'Sawarabi Mincho', sans-serif;
 }
 
+hr {
+  color:pink;
+  width: 60%;
+}
+
 #genre-seeds {
+  width: 20%;
+  justify-content: center;
+  align-content: center;
 }

@@ -242,3 +242,13 @@
     <button (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)">Get Mood</button>
   </form>
 </div>
+<div *ngFor="let song of playlist">
+ <img src="{{song.album.images[1].url}}">
+  <h3>Name: {{song.name}}</h3>
+  <h3>Artist: {{song.album.artists[0].name}}</h3>
+  <h3>{{song.album.name}}</h3>
+  <audio controls>
+    <source src="{{song.preview_url}}" type="audio/mpeg">
+  </audio>
+  <hr>
+</div>
