@@ -1,5 +1,5 @@
 body{
- background-color: black;
+ background-color: #211d1d;
  height: 100%;
  color: white;
 }
@@ -9,27 +9,29 @@ h1 {
   font-size: 152pt;
   opacity: .9;
   text-align: center;
-  padding-top: 230px;
+  padding-top: 300px;
   font-size-adjust: auto;
+  color: #dedede;
 }
 
  #grad1 {
    background-color: black; /* For browsers that do not support gradients */
    background-image: linear-gradient(to bottom right, black, #702270);
-   height: 1100px;
+   height: 1375px;
  }
 
   .panel-heading {
- text-align: center;
+
  /* color: #b4d315; */
  color: white;
  font-size: 40pt;
  height: 700px;
  width: 100%;
- background: url('/assets/radiowave2.jpg');
+ background: url('/assets/radiowave.svg');
  background opacity: 0.1;
  background-position: center;
  background-size: cover;
+ overflow: hidden;
 }
 
  .panel-footer {
@@ -38,4 +40,8 @@ h1 {
  padding: 10px;
  margin: 0;
  position: 0;
+}
+
+.row {
+  text-align: left;
 }
