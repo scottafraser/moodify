@@ -1,5 +1,35 @@
 #grad1 {
-    height: 600px;
     background-color: red; /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right, purple, #440436);
+    height: 110%;
+
+}
+
+#moodBtn {
+  background-color: chartreuse;
+  color: navy;
+  font-family: Cinzel;
+  font-size: 14pt;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+#formFormat {
+  font-size: 10pt;
+  color: white;
+}
+
+h4 {
+  color: black;
+  font-family: Cinzel;
+  font-weight: bold;
+  font-size: 20pt;
+}
+
+h3 {
+  color: pink;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+#genre-seeds {
 }

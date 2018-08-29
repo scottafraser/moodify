@@ -24,11 +24,8 @@ export class FormComponent implements OnInit {
 
     this.genres= [];
     this.spotifyAPI.loadGenres().subscribe(response => {
-      console.log(response);
-
-      if(response.albums.items.length > 0) {
+      if (response.albums.items.length > 0) {
         this.genres = response.genres;
-
       }
     });
   }

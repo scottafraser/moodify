@@ -13,3 +13,14 @@ a {
 h3 {
   font-size: 23px;
 }
+
+.container {
+  background-color: black;
+  color: white;
+}
+
+#albumBtn {
+  background-color: chartreuse;
+  border-radius: 12px;
+
+}
