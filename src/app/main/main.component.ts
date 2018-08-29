@@ -22,15 +22,15 @@ export class MainComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.spotifyAPI.getToken()
-      .subscribe(res => {
-        this.spotifyAPI.loadGenres(res.access_token)
-          // tslint:disable-next-line:no-shadowed-variable
-          .subscribe(res => {
-            console.log(res);
-            this.genres = res;
-    });
-  });
+  //   this.spotifyAPI.getToken()
+  //     .subscribe(res => {
+  //       this.spotifyAPI.loadGenres(res.access_token)
+  //         // tslint:disable-next-line:no-shadowed-variable
+  //         .subscribe(res => {
+  //           console.log(res);
+  //           this.genres = res;
+  //   });
+  // });
   }
 
   searchAlbums(artist: string) {

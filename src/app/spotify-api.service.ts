@@ -42,49 +42,68 @@ export class SpotifyAPIService {
       .map((res: Response) => res.json())
   }
 
-  loadGenres(token: string) {
-    this.GenreUrl = `https://api.spotify.com/v1/recommendations/available-genre-seeds`;
+  moodTracks(genre: string, valenceTarget: number, danceabilityTarget: number, tempoMin: number, tempoMax: number, token: string) {
+
+    console.log(this.encoded);
+    this.searchUrl = `https://api.spotify.com/v1/recommendations?market=US&seed_genres=${genre.toLowerCase()}&target_danceability=${danceabilityTarget}&min_tempo=${tempoMin}&max_tempo=${tempoMax}&target_valence=${valenceTarget}`;
+
+    // this.searchUrl = `https://api.spotify.com/v1/recommendations?market=US&seed_genres=acoustic&target_danceability=0.5494912927359931&min_tempo=78.18716114414627&max_tempo=176.643113448108&target_valence=0.5641090053414818`
+    console.log(this.searchUrl);
+    
     let headers = new Headers();
     headers.append('Authorization', 'Bearer ' + token);
 
-    return this._http.get(this.GenreUrl, { headers: headers })
+    return this._http.get(this.searchUrl, { headers: headers })
       .map((res: Response) => res.json())
   }
-
-  getArtist(id: string, token: string) {
-    this.ArtistUrl = 'https://api.spotify.com/v1/artists/' + id;
-    let headers = new Headers();
-    headers.append('Authorization', 'Bearer ' + token);
-
-    return this._http.get(this.ArtistUrl, { headers: headers })
-      .map((res: Response) => res.json())
-
-  }
-
-
-  getAlbums(artistId: string, token: string) {
-
-    this.AlbumsUrl = 'https://api.spotify.com/v1/artists/' + artistId + '/albums/?query=&limit=50';
-    let headers = new Headers();
-    headers.append('Authorization', 'Bearer ' + token);
-
-    return this._http.get(this.AlbumsUrl, { headers: headers })
-      .map((res: Response) => res.json())
-
-  }
-
-
-
-  getAlbum(id: string, token: string) {
-
-    this.AlbumUrl = 'https://api.spotify.com/v1/albums/' + id;
-    let headers = new Headers();
-    headers.append('Authorization', 'Bearer ' + token);
-
-    return this._http.get(this.AlbumUrl, { headers: headers })
-      .map((res: Response) => res.json())
-
-  }
-
 
 }
+
+// https:api.spotify.com/v1/recommendations?market=US&seed_genres=Acoustic&target_danceability=0.5424963387234651&min_tempo=81.26883129249934&max_tempo=182.70243837063552&target_valence=0.4948070699758
+// https:api.spotify.com/v1/recommendations?market=US&seed_genres=acoustic&target_danceability=0.5494912927359931&min_tempo=78.18716114414627&max_tempo=176.643113448108&target_valence=0.5641090053414818`
+
+
+
+  // loadGenres(token: string) {
+  //   this.GenreUrl = `https://api.spotify.com/v1/recommendations/available-genre-seeds`;
+  //   let headers = new Headers();
+  //   headers.append('Authorization', 'Bearer ' + token);
+
+  //   return this._http.get(this.GenreUrl, { headers: headers })
+  //     .map((res: Response) => res.json())
+  // }
+
+  // getArtist(id: string, token: string) {
+  //   this.ArtistUrl = 'https://api.spotify.com/v1/artists/' + id;
+  //   let headers = new Headers();
+  //   headers.append('Authorization', 'Bearer ' + token);
+
+  //   return this._http.get(this.ArtistUrl, { headers: headers })
+  //     .map((res: Response) => res.json())
+
+  // }
+
+
+  // getAlbums(artistId: string, token: string) {
+
+  //   this.AlbumsUrl = 'https://api.spotify.com/v1/artists/' + artistId + '/albums/?query=&limit=50';
+  //   let headers = new Headers();
+  //   headers.append('Authorization', 'Bearer ' + token);
+
+  //   return this._http.get(this.AlbumsUrl, { headers: headers })
+  //     .map((res: Response) => res.json())
+
+  // }
+
+  // getAlbum(id: string, token: string) {
+
+  //   this.AlbumUrl = 'https://api.spotify.com/v1/albums/' + id;
+  //   let headers = new Headers();
+  //   headers.append('Authorization', 'Bearer ' + token);
+
+  //   return this._http.get(this.AlbumUrl, { headers: headers })
+  //     .map((res: Response) => res.json())
+
+  // }
+
+

@@ -21,27 +21,50 @@ export class FormComponent implements OnInit {
   tempoSpotifyMax: number;
 
   ngOnInit() {
-
-    this.genres= [];
-    this.spotifyAPI.loadGenres().subscribe(response => {
-      if (response.albums.items.length > 0) {
-        this.genres = response.genres;
-      }
-    });
+    // this.genres= [];
+    // this.spotifyAPI.getToken()
+    //   .subscribe(res => {
+    //     this.spotifyAPI.loadGenres(res.access_token)
+    //     .subscribe(res => {
+    //       if (res.albums.items.length > 0) {
+    //     this.genres = res.genres;
+    //   }
+    //   });
+    // });
   }
+
+  // getTracksByMood(genre: string, valenceTarget: number, danceabilityTarget: number, tempoMin: number, tempoMax: number) {
+  //   this.spotifyAPI.getToken()
+  //     .subscribe(res => {
+  //       this.spotifyAPI.moodTracks(genre, valenceTarget, danceabilityTarget, tempoMin, tempoMax,  res.access_token)
+  //         // tslint:disable-next-line:no-shadowed-variable
+  //         .subscribe(res => {
+  //           // this.albums = res.albums.items;
+  //           console.log(res);
+  //         });
+  //     });
+  //   }
 
   tallyMoodAndSaveGenre(genre: string, q1Answer: string, q2Answer: string, q3Answer: string, q4Answer: string, q5Answer: string, q6Answer: string) {
     this.genre = genre;
-    console.log(this.genre);
     let valenceQuizScore = parseInt(q1Answer) + parseInt(q3Answer);
     let danceabilityQuizScore = parseInt(q4Answer) + parseInt(q6Answer);
     let tempoQuizScore = parseInt(q2Answer) + parseInt(q5Answer);
 
-    this.vanlenceSpotifyTarget = (valenceQuizScore / 8.1) + Math.random()/10;
-    this.danceabilitySpotifyTarget = (danceabilityQuizScore / 8.1) + Math.random()/10;
-    this.tempoSpotifyMin = tempoQuizScore * (18.75) + (Math.random() * 10);
-    this.tempoSpotifyMax = tempoQuizScore * (18.75) + (Math.random() * 10) + 100;
+    this.vanlenceSpotifyTarget = ((valenceQuizScore / 8.1) + Math.random()/10);
+    this.danceabilitySpotifyTarget = ((danceabilityQuizScore / 8.1) + Math.random()/10);
+    this.tempoSpotifyMin = (tempoQuizScore * (18.75) + (Math.random() * 10));
+    this.tempoSpotifyMax = (tempoQuizScore * (18.75) + (Math.random() * 10) + 100);
 
-    console.log(this.tempoSpotifyMin, this.tempoSpotifyMax)
+    this.spotifyAPI.getToken()
+    .subscribe(res => {
+      this.spotifyAPI.moodTracks(this.genre, this.vanlenceSpotifyTarget, this.danceabilitySpotifyTarget,  this.tempoSpotifyMin , this.tempoSpotifyMax,  res.access_token)
+        // tslint:disable-next-line:no-shadowed-variable
+        .subscribe(res => {
+          // this.albums = res.albums.items;
+          console.log(res);
+        });
+    });
+    console.log(this.vanlenceSpotifyTarget, this.danceabilitySpotifyTarget, this.tempoSpotifyMin, this.tempoSpotifyMax)
   }
 }

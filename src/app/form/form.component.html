@@ -239,5 +239,6 @@
       <input type="radio" name="danceability-inc" [value]="4" id="Q6_s-agree" [(ngModel)]="q6.value">
       <label for="Q6_s-agree">Strongly Agree</label>
     </div>
+    <button (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)">Get Mood</button>
   </form>
 </div>
