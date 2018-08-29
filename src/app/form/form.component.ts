@@ -15,6 +15,10 @@ export class FormComponent implements OnInit {
   }
   genre: string
   genres: any[];
+  vanlenceSpotifyTarget: number;
+  danceabilitySpotifyTarget: number;
+  tempoSpotifyMin: number;
+  tempoSpotifyMax: number;
 
   ngOnInit() {
 
@@ -32,12 +36,15 @@ export class FormComponent implements OnInit {
   tallyMoodAndSaveGenre(genre: string, q1Answer: string, q2Answer: string, q3Answer: string, q4Answer: string, q5Answer: string, q6Answer: string) {
     this.genre = genre;
     console.log(this.genre);
-    let valenceScore = q1Answer + q3Answer;
-    let danceabilityScore = q4Answer + q6Answer
-    let tempoScore = q2Answer + q5Answer
+    let valenceQuizScore = parseInt(q1Answer) + parseInt(q3Answer);
+    let danceabilityQuizScore = parseInt(q4Answer) + parseInt(q6Answer);
+    let tempoQuizScore = parseInt(q2Answer) + parseInt(q5Answer);
 
+    this.vanlenceSpotifyTarget = (valenceQuizScore / 8.1) + Math.random()/10;
+    this.danceabilitySpotifyTarget = (danceabilityQuizScore / 8.1) + Math.random()/10;
+    this.tempoSpotifyMin = tempoQuizScore * (18.75) + (Math.random() * 10);
+    this.tempoSpotifyMax = tempoQuizScore * (18.75) + (Math.random() * 10) + 100;
+
+    console.log(this.tempoSpotifyMin, this.tempoSpotifyMax)
   }
-  }
-
-
 }
