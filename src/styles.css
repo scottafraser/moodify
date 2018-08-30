@@ -16,14 +16,19 @@ h1 {
 
  #grad1 {
    background-color: black; /* For browsers that do not support gradients */
-   background-image: linear-gradient(#211d1d 50%,  #1db954);
+   background-image: linear-gradient(#211d1d,  #1db954 35%);
+   /* opacity: .7; */
    height: 1375px;
+ }
+
+ .genre{
+  opacity: 1;
  }
 
   .panel-heading {
 
  /* color: #b4d315; */
- color: white;
+ color: grey;
  font-size: 40pt;
  height: 700px;
  width: 100%;
