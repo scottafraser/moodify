@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+// tslint:disable-next-line:import-blacklist
+import 'rxjs/Rx';
+import { SpotifyAPIService } from './spotify-api.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'moodify';
 }

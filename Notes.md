@@ -1,0 +1,15 @@
+# Spotify Criteria
+- acousticness
+- __danceability__
+- duration
+- energy
+- instrumentalness
+- key
+- liveliness
+- loudness
+- mode
+- popularity
+- speechiness
+- __tempo__
+- time_signature
+- __valence__

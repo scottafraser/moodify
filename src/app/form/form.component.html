@@ -1,0 +1,270 @@
+<div class="genre">
+  <h2>Select the Genre of Music you would like:</h2>
+
+  <form class="genreForm">
+      <select class="form-control" id="genre-seeds" #selectGenre>
+        <option>Acoustic</option>
+        <option>Afrobeat</option>
+        <option>Alt-rock</option>
+        <option>Alternative</option>
+        <option>Ambient</option>
+        <option>Anime</option>
+        <option>Black-metal</option>
+        <option>Bluegrass</option>
+        <option>Blues</option>
+        <option>Bossanova</option>
+        <option>Brazil</option>
+        <option>Breakbeat</option>
+        <option>British</option>
+        <option>Cantopop</option>
+        <option>Chicago-house</option>
+        <option>Children</option>
+        <option>Chill</option>
+        <option>Classical</option>
+        <option>Club</option>
+        <option>Comedy</option>
+        <option>Country</option>
+        <option>Dance</option>
+        <option>Dancehall</option>
+        <option>Death-metal</option>
+        <option>Deep-house</option>
+        <option>Detroit-techno</option>
+        <option>Disco</option>
+        <option>Disney</option>
+        <option>Drum-and-bass</option>
+        <option>Dub</option>
+        <option>Dubstep</option>
+        <option>EDM</option>
+        <option>Electro</option>
+        <option>Electronic</option>
+        <option>Emo</option>
+        <option>Folk</option>
+        <option>Forro</option>
+        <option>French</option>
+        <option>Funk</option>
+        <option>Garage</option>
+        <option>German</option>
+        <option>Gospel</option>
+        <option>Goth</option>
+        <option>Grindcore</option>
+        <option>Groove</option>
+        <option>Grunge</option>
+        <option>Guitar</option>
+        <option>Happy</option>
+        <option>Hard-rock</option>
+        <option>Hardcore</option>
+        <option>Hardstyle</option>
+        <option>Heavy-metal</option>
+        <option>Hip-hop</option>
+        <option>Holidays</option>
+        <option>Honky-tonk</option>
+        <option>House</option>
+        <option>IDM</option>
+        <option>Indian</option>
+        <option>Indie</option>
+        <option>Indie-pop</option>
+        <option>Industrial</option>
+        <option>Iranian</option>
+        <option>J-dance</option>
+        <option>J-idol</option>
+        <option>J-pop</option>
+        <option>J-rock</option>
+        <option>Jazz</option>
+        <option>K-pop</option>
+        <option>Kids</option>
+        <option>Latin</option>
+        <option>Latino</option>
+        <option>Malay</option>
+        <option>Mandopop</option>
+        <option>Metal</option>
+        <option>Metal-misc</option>
+        <option>Metalcore</option>
+        <option>Minimal-techno</option>
+        <option>Movies</option>
+        <option>MPB</option>
+        <option>New-age</option>
+        <option>New-release</option>
+        <option>Opera</option>
+        <option>Pagode</option>
+        <option>Party</option>
+        <option>Philippines-opm</option>
+        <option>Piano</option>
+        <option>Pop</option>
+        <option>Pop-film</option>
+        <option>Post-dubstep</option>
+        <option>Power-pop</option>
+        <option>Progressive-house</option>
+        <option>Psych-rock</option>
+        <option>Punk</option>
+        <option>Punk-rock</option>
+        <option>R-N-B</option>
+        <option>Rainy-day</option>
+        <option>Reggae</option>
+        <option>Reggaeton</option>
+        <option>Road-trip</option>
+        <option>Rock</option>
+        <option>Rock-n-roll</option>
+        <option>Rockabilly</option>
+        <option>Romance</option>
+        <option>Sad</option>
+        <option>Salsa</option>
+        <option>Samba</option>
+        <option>Sertanejo</option>
+        <option>Show-tunes</option>
+        <option>Singer-songwriter</option>
+        <option>Ska</option>
+        <option>Sleep</option>
+        <option>Songwriter</option>
+        <option>Soul</option>
+        <option>Soundtracks</option>
+        <option>Spanish</option>
+        <option>Study</option>
+        <option>Summer</option>
+        <option>Swedish</option>
+        <option>Synth-pop</option>
+        <option>Tango</option>
+        <option>Techno</option>
+        <option>Trance</option>
+        <option>Trip-hop</option>
+        <option>Turkish</option>
+        <option>Work-out</option>
+        <option>World-music<option>
+      </select>
+
+    <h3>Right now, how much do you agree with each of the following statements?</h3>
+    <div class="row">
+      <div id="Q1" class="form-group col-md-4" #q1>
+        <h3>I feel optimistic.</h3>
+        <input class="radio" type="radio" name="valence-inc" [value]="0" id="Q1_s-disagree" [(ngModel)]="q1.value">
+        <label for="Q1_s-disagree">Strongly Disagree</label><br>
+
+        <input class="radio" type="radio" name="valence-inc" [value]="1" id="Q1_disagree" [(ngModel)]="q1.value">
+        <label for="Q1_disagree">Disagree</label><br>
+
+        <input class="radio" type="radio" name="valence-inc" [value]="2" id="Q1_neutral" [(ngModel)]="q1.value">
+        <label for="Q1_neutral">Feel Neutral</label><br>
+
+        <input class="radio" type="radio" name="valence-inc" [value]="3" id="Q1_agree" [(ngModel)]="q1.value">
+        <label for="Q1_agree">Agree</label><br>
+
+        <input class="radio" type="radio" name="valence-inc" [value]="4" id="Q1_s-agree" [(ngModel)]="q1.value">
+        <label for="Q1_s-agree">Strongly Agree</label>
+      </div>
+
+      <div id="Q2" class="form-group col-md-4" #q2>
+        <h3>I feel worried.</h3>
+        <input class="radio" type="radio" name="tempo-decr" [value]="4" id="Q2_s-disagree" [(ngModel)]="q2.value">
+        <label for="Q2_s-disagree">Strongly Disagree</label><br>
+
+        <input class="radio" type="radio" name="tempo-decr" [value]="3" id="Q2_disagree" [(ngModel)]="q2.value">
+        <label for="Q2_disagree">Disagree</label><br>
+
+        <input class="radio" type="radio" name="tempo-decr" [value]="2" id="Q2_neutral" [(ngModel)]="q2.value">
+        <label for="Q2_neutral">Feel Neutral</label><br>
+
+        <input class="radio" type="radio" name="tempo-decr" [value]="1" id="Q2_agree" [(ngModel)]="q2.value">
+        <label for="Q2_agree">Agree</label><br>
+
+        <input class="radio" type="radio" name="tempo-decr" [value]="0" id="Q2_s-agree" [(ngModel)]="q2.value">
+        <label for="Q2_s-agree">Strongly Agree</label>
+      </div>
+
+      <div id="Q3" class="form-group col-md-4" #q3>
+        <h3>I feel discouraged.</h3>
+        <input class="radio" type="radio" name="valence-decr" [value]="4" id="Q3_s-disagree" [(ngModel)]="q3.value">
+        <label for="Q3_s-disagree">Strongly Disagree</label><br>
+
+        <input class="radio" type="radio" name="valence-decr" [value]="3" id="Q3_disagree" [(ngModel)]="q3.value">
+        <label for="Q3_disagree">Disagree</label><br>
+
+        <input class="radio" type="radio" name="valence-decr" [value]="2" id="Q3_neutral" [(ngModel)]="q3.value">
+        <label for="Q3_neutral">Feel Neutral</label><br>
+
+        <input class="radio" type="radio" name="valence-decr" [value]="1" id="Q3_agree" [(ngModel)]="q3.value">
+        <label for="Q3_agree">Agree</label><br>
+
+        <input class="radio" type="radio" name="valence-decr" [value]="0" id="Q3_s-agree" [(ngModel)]="q3.value">
+        <label for="Q3_s-agree">Strongly Agree</label>
+      </div>
+
+      <div id="Q4" class="form-group col-md-4" #q4>
+        <h3>I feel calm.</h3>
+        <input class="radio" type="radio" name="danceability-decr" [value]="4" id="Q4_s-disagree" [(ngModel)]="q4.value">
+        <label for="Q4_s-disagree">Strongly Disagree</label><br>
+
+        <input class="radio" type="radio" name="danceability-decr" [value]="3" id="Q4_disagree" [(ngModel)]="q4.value">
+        <label for="Q4_disagree">Disagree</label><br>
+
+        <input class="radio" type="radio" name="danceability-decr" [value]="2" id="Q4_neutral" [(ngModel)]="q4.value">
+        <label for="Q4_neutral">Feel Neutral</label><br>
+
+        <input class="radio" type="radio" name="danceability-decr" [value]="1" id="Q4_agree" [(ngModel)]="q4.value">
+        <label for="Q4_agree">Agree</label><br>
+
+        <input class="radio" type="radio" name="danceability-decr" [value]="0" id="Q4_s-agree" [(ngModel)]="q4.value">
+        <label for="Q4_s-agree">Strongly Agree</label>
+      </div>
+
+      <div id="Q5" class="form-group col-md-4" #q5>
+        <h3>I feel focused.</h3>
+        <input class="radio" type="radio" name="tempo-inc" [value]="0" id="Q5_s-disagree" [(ngModel)]="q5.value">
+        <label for="Q5_s-disagree">Strongly Disagree</label><br>
+
+        <input class="radio" type="radio" name="tempo-inc" [value]="1" id="Q5_disagree" [(ngModel)]="q5.value">
+        <label for="Q5_disagree">Disagree</label><br>
+
+        <input class="radio" type="radio" name="tempo-inc" [value]="2" id="Q5_neutral" [(ngModel)]="q5.value">
+        <label for="Q5_neutral">Feel Neutral</label><br>
+
+        <input class="radio" type="radio" name="tempo-inc" [value]="3" id="Q5_agree" [(ngModel)]="q5.value">
+        <label for="Q5_agree">Agree</label><br>
+
+        <input class="radio" type="radio" name="tempo-inc" [value]="4" id="Q5_s-agree" [(ngModel)]="q5.value">
+        <label for="Q5_s-agree">Strongly Agree</label>
+      </div>
+
+      <div id="Q6" class="form-group col-md-4" #q6>
+        <h3>I feel energetic.</h3>
+        <input class="radio" type="radio" name="danceability-inc" [value]="0" id="Q6_s-disagree" [(ngModel)]="q6.value">
+        <label for="Q6_s-disagree">Strongly Disagree</label><br>
+
+        <input class="radio" type="radio" name="danceability-inc" [value]="1" id="Q6_disagree" [(ngModel)]="q6.value">
+        <label for="Q6_disagree">Disagree</label><br>
+
+        <input class="radio" type="radio" name="danceability-inc" [value]="2" id="Q6_neutral" [(ngModel)]="q6.value">
+        <label for="Q6_neutral">Feel Neutral</label><br>
+
+        <input class="radio" type="radio" name="danceability-inc" [value]="3" id="Q6_agree" [(ngModel)]="q6.value">
+        <label for="Q6_agree">Agree</label><br>
+
+        <input class="radio" type="radio" name="danceability-inc" [value]="4" id="Q6_s-agree" [(ngModel)]="q6.value">
+        <label for="Q6_s-agree">Strongly Agree</label>
+      </div>
+
+    </div>
+
+    <br>
+    <button class="hoverBtn" (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)"><h5>Get Mood Playlist</h5></button>
+  </form>
+  <div *ngIf="playlist.length > 0" class="">
+    <h1 id="playlist-title">Mood Playlist</h1>
+  </div>
+
+  <div class="row" id="results">
+    <div class="moodPlaylist col-lg-4" *ngFor="let song of playlist">
+      <div>
+        <img class="img-fluid" src="{{song.album.images[0].url}}">
+         <h6 class="title"><strong>Title: </strong> {{song.name}}</h6>
+         <h6 class="artist"><strong>Artist: </strong> {{song.album.artists[0].name}}</h6>
+         <h6 class="album"><strong>Album:  </strong>{{song.album.name}}</h6>
+         <div *ngIf="song.preview_url !== null">
+          <audio controls>
+            <source src="{{song.preview_url}}" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+
+</div>
