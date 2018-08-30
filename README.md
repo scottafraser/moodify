@@ -1,5 +1,9 @@
 # Moodify
+## By Eric Shull, Scott Fraser, Annie Shin, Rita Bennett-Chew
 
+A student group project for the Epicodus JavaScript course, August 30th 2018. We used Angular API calls, and Firebase for hosting the website.
+
+The concept behind our app was to determine a users mood and play a Spotify Playlist based on that mood and their favorite genre. 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ## Development server
