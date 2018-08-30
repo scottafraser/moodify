@@ -45,7 +45,7 @@ export class SpotifyAPIService {
   moodTracks(genre: string, valenceTarget: number, danceabilityTarget: number, tempoMin: number, tempoMax: number, token: string) {
 
     console.log(this.encoded);
-    this.searchUrl = `https://api.spotify.com/v1/recommendations?market=US&seed_genres=${genre.toLowerCase()}&target_danceability=${danceabilityTarget}&min_tempo=${tempoMin}&max_tempo=${tempoMax}&target_valence=${valenceTarget}`;
+    this.searchUrl = `https://api.spotify.com/v1/recommendations?market=US&seed_genres=${genre.toLowerCase()}&target_danceability=${danceabilityTarget}&limit=21&min_tempo=${tempoMin}&max_tempo=${tempoMax}&target_valence=${valenceTarget}`;
 
     // this.searchUrl = `https://api.spotify.com/v1/recommendations?market=US&seed_genres=acoustic&target_danceability=0.5494912927359931&min_tempo=78.18716114414627&max_tempo=176.643113448108&target_valence=0.5641090053414818`
     console.log(this.searchUrl);
