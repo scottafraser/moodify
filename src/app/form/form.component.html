@@ -248,19 +248,21 @@
     <button class="hoverBtn" (click)="tallyMoodAndSaveGenre(selectGenre.value, q1.value, q2.value, q3.value, q4.value, q5.value, q6.value)"><h5>Get Mood Playlist</h5></button>
   </form>
   <div *ngIf="playlist.length > 0" class="">
-    <h1>Mood Playlist</h1>
+    <h1 id="playlist-title">Mood Playlist</h1>
   </div>
 
-  <div class="row">
+  <div class="row" id="results">
     <div class="moodPlaylist col-lg-4" *ngFor="let song of playlist">
-      <div class="">
+      <div>
         <img class="img-fluid" src="{{song.album.images[0].url}}">
          <h6 class="title"><strong>Title: </strong> {{song.name}}</h6>
          <h6 class="artist"><strong>Artist: </strong> {{song.album.artists[0].name}}</h6>
          <h6 class="album"><strong>Album:  </strong>{{song.album.name}}</h6>
-         <audio controls>
-           <source src="{{song.preview_url}}" type="audio/mpeg">
-         </audio>
+         <div *ngIf="song.preview_url !== null">
+          <audio controls>
+            <source src="{{song.preview_url}}" type="audio/mpeg">
+          </audio>
+        </div>
       </div>
       <hr>
     </div>

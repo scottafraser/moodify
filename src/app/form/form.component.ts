@@ -45,3 +45,8 @@ export class FormComponent{
     console.log(this.vanlenceSpotifyTarget, this.danceabilitySpotifyTarget, this.tempoSpotifyMin, this.tempoSpotifyMax)
   }
 }
+
+//   checkMusic(url: string) {
+//     if (url !== null) {
+      
+// }

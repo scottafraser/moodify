@@ -16,7 +16,7 @@ h1 {
 
  #grad1 {
    background-color: black; /* For browsers that do not support gradients */
-   background-image: linear-gradient(to bottom right, black, #702270);
+   background-image: linear-gradient(#211d1d 50%,  #1db954);
    height: 1375px;
  }
 
@@ -28,7 +28,6 @@ h1 {
  height: 700px;
  width: 100%;
  background: url('/assets/radiowave.svg');
- background opacity: 0.1;
  background-position: center;
  background-size: cover;
  overflow: hidden;
