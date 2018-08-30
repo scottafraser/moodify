@@ -6,6 +6,7 @@ import { SpotifyAPIService } from './spotify-api.service'
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { FormComponent } from './form/form.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormComponent } from './form/form.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    HttpClientModule
 
   ],
   providers: [SpotifyAPIService],

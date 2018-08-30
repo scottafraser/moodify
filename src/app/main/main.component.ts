@@ -3,6 +3,7 @@ import { SpotifyAPIService } from '../spotify-api.service';
 import { Observable } from 'rxjs/Observable';
 import { Subscription } from 'rxjs/Subscription';
 import { Http, Response } from '@angular/http';
+import {HttpClient} from '@angular/common/http'
 
 
 @Component({
@@ -16,9 +17,11 @@ export class MainComponent {
   genres: any[];
   albums: any[];
   token: any[];
+  messages = this.http.get<any[]>('http://localhost:8888/');
 
   constructor(
-    public spotifyAPI: SpotifyAPIService
+    public spotifyAPI: SpotifyAPIService,
+    private http: HttpClient
   ) {}
 
   searchAlbums(artist: string) {

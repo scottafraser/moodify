@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-// tslint:disable-next-line:import-blacklist
+import {HttpClient} from '@angular/common/http'
 import 'rxjs/Rx';
 import { SpotifyAPIService } from './spotify-api.service';
 
@@ -10,4 +10,5 @@ import { SpotifyAPIService } from './spotify-api.service';
 })
 export class AppComponent {
   title = 'moodify';
+    
 }
